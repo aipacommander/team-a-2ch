@@ -18,6 +18,18 @@ $threads = $paginate->paginate('threads');
 </head>
 <body>
 <h1>スレッド一覧 <span>全<?= ViewUtil::h($paginate->getTotal()) ?>件</span></h1>
+<style>
+    .add-threads {
+        border: 1px solid #ccc;
+        padding: 5px;
+        margin: 5px;
+    }
+</style>
+<form action="add_thread.php" class="add-threads">
+    <input type="text" name="threads_name" placeholder="スレッド名">
+    <input type="text" name="delete_key" placeholder="削除キー">
+    <input type="submit" value="追加">
+</form>
 <ul id="thread-list">
     <?php foreach ($threads as $thread): ?>
         <li>

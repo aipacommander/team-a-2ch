@@ -15,16 +15,12 @@ if(!empty($threadsId) ) {
     
     $threadPdo = new DbUtil();
     $threadsData = $threadPdo->getThredsData($threadsId);
-//    $commentsData = $threadPdo->getCommentsData($threadsId);  
-    
+
    
         foreach ($threadsData as $row) {
             $id = $row['threads_id'];
             $threadsName = $row['threads_name'];
-//            $deleteKey = $row['delete_key'];
-//            $created = $row['created'];
-//            $modified = $row['modified'];
-        }      
+        }
 }        
 ?>
 <!DOCTYPE html>
@@ -138,7 +134,7 @@ and open the template in the editor.
             <input type="hidden" value="<?php echo $threadsId ?>" name="unique_id">
             <input type="hidden" value="<?php echo $threadsId ?>" name="created">
             <input type="submit" value="投稿" name="submit" class="submit02">
-        </from>
+        </form>
         </div>
     </body>
 </html>

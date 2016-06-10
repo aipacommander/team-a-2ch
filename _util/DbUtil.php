@@ -273,7 +273,7 @@ class DbUtil
     {
         try {
             $this->pdo->beginTransaction();
-            $sql = "INSERT INTO comments(threads_id,comment,nickname,delete_key,created)VALUES(:thredsIdData,:commentData,:niknameData,:deleteKey,:created)";
+            $sql = "INSERT INTO comments(threads_id,comment,nickname,delete_key,created, unique_id, modified)VALUES(:thredsIdData,:commentData,:niknameData,:deleteKey,:created, 0, now())";
             $stmh = $this->pdo->prepare($sql);
             $stmh->bindValue(':thredsIdData', $threadsId);
             $stmh->bindValue(':niknameData', $nickName);
@@ -326,5 +326,25 @@ class DbUtil
 
     }
 
-
+    /**
+     * スレッドを作成する
+     * @param $threadsName
+     * @param $deleteKey
+     * @return bool
+     */
+    public function insertThread($threadsName, $deleteKey)
+    {
+        try {
+            $sql = "INSERT INTO threads (threads_name, delete_key, created, modified) VALUES (:threadsName, :deleteKey, now(), now())";
+            $stmh = $this->pdo->prepare($sql);
+            $stmh->bindValue(':threadsName', $threadsName);
+            $stmh->bindValue(':deleteKey', $deleteKey);
+            $stmh->execute();
+            $threadsId = $this->pdo->lastInsertId();
+        } catch (PDOException $e) {
+            echo('Error:' . $e->getMessage());
+            return false;
+        }
+        return $threadsId;
+    }
 }
