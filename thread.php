@@ -1,5 +1,6 @@
 <?php
 require('./_util/DbUtil.php');
+require('./_util/ViewUtil.php');
 $id;
 $threadsName;
 $deleteKey;
@@ -105,7 +106,7 @@ and open the template in the editor.
     </head>
     <body>
         <div id="wraper">
-        <h1><?php echo $threadsName; ?></h1>
+        <h1><?php echo ViewUtil::h($threadsName); ?></h1>
         
         <?php
         
@@ -113,8 +114,8 @@ and open the template in the editor.
             foreach ($threadsData as $row2) {      
             echo '<form action="comment.php" method="post">';
             echo '<div class="toukou_area">';
-            echo "<p class=\"toukousya\">No".$num."&nbsp;&nbsp;投稿者：".$row2['nickname']."&nbsp;&nbsp;ID：".$row2['unique_id']."&nbsp;&nbsp"."投稿日：".$row2['created']."</p>";
-            echo "<p class=\"txt_bold\">".$row2['comment']."</p>";
+            echo "<p class=\"toukousya\">No".$num."&nbsp;&nbsp;投稿者：".ViewUtil::h($row2['nickname'])."&nbsp;&nbsp;ID：".ViewUtil::h($row2['unique_id'])."&nbsp;&nbsp"."投稿日：".ViewUtil::h($row2['created'])."</p>";
+            echo "<p class=\"txt_bold\">".ViewUtil::h($row2['comment'])."</p>";
             echo "<p class=\"toukoubi\"><input type=\"hidden\" name=\"comments_id\" value=\"".$row2['comments_id']."\"><input type=\"text\" name=\"delete_key\"><input type=\"hidden\" value=\"".$id."\"name=\"threads_id\"><input type=\"submit\" name=\"submit\" value=\"削除\"></p>";
             echo '</div></form>';
             $num++;
