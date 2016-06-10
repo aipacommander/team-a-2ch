@@ -68,7 +68,7 @@ class DbUtil
      */
     public function paginate($tableName, $offset, $count)
     {
-        $stmt = $this->pdo->prepare("SELECT * FROM $tableName limit :offset, :count");
+        $stmt = $this->pdo->prepare("SELECT * FROM $tableName order by created DESC limit :offset, :count");
         $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
         $stmt->bindValue(':count', $count, PDO::PARAM_INT);
         return $this->executeStatement($stmt);
