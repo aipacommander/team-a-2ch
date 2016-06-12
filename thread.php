@@ -18,13 +18,14 @@ if(!empty($threadsId) ) {
 //    $commentsData = $threadPdo->getCommentsData($threadsId);  
     
    
-        foreach ($threadsData as $row) {
+      foreach ($threadsData as $row) {
             $id = $row['threads_id'];
             $threadsName = $row['threads_name'];
-//            $deleteKey = $row['delete_key'];
+//            $deleteKey = $row['de lete_key'];
 //            $created = $row['created'];
 //            $modified = $row['modified'];
-        }      
+        }
+
 }        
 ?>
 <!DOCTYPE html>
@@ -114,14 +115,16 @@ and open the template in the editor.
         <?php
         
             $num = 1;
-            foreach ($threadsData as $row2) {      
-            echo '<form action="comment.php" method="post">';
-            echo '<div class="toukou_area">';
-            echo "<p class=\"toukousya\">No".$num."&nbsp;&nbsp;投稿者：".$row2['nickname']."&nbsp;&nbsp;ID：".$row2['unique_id']."&nbsp;&nbsp"."投稿日：".$row2['created']."</p>";
-            echo "<p class=\"txt_bold\">".$row2['comment']."</p>";
-            echo "<p class=\"toukoubi\"><input type=\"hidden\" name=\"comments_id\" value=\"".$row2['comments_id']."\"><input type=\"text\" name=\"delete_key\"><input type=\"hidden\" value=\"".$id."\"name=\"threads_id\"><input type=\"submit\" name=\"submit\" value=\"削除\"></p>";
-            echo '</div></form>';
-            $num++;
+            foreach ($threadsData as $row2) {    
+                if(!empty($row2['comment'])){
+                echo '<form action="comment.php" method="post">';
+                echo '<div class="toukou_area">';
+                echo "<p class=\"toukousya\">No".$num."&nbsp;&nbsp;投稿者：".$row2['nickname']."&nbsp;&nbsp;ID：".$row2['unique_id']."&nbsp;&nbsp"."投稿日：".$row2['created']."</p>";
+                echo "<p class=\"txt_bold\">".$row2['comment']."</p>";
+                echo "<p class=\"toukoubi\"><input type=\"hidden\" name=\"comments_id\" value=\"".$row2['comments_id']."\"><input type=\"text\" name=\"delete_key\"><input type=\"hidden\" value=\"".$id."\"name=\"threads_id\"><input type=\"submit\" name=\"submit\" value=\"削除\"></p>";
+                echo '</div></form>';
+                $num++;
+                }                
         }
         ?>
         
