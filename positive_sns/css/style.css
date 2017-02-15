@@ -1,0 +1,234 @@
+@charset "UTF-8";
+            body{
+                background: #fff4b0;
+                font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+            }
+            
+            a:hover{
+                text-decoration: none;
+            }
+            
+            .cf:after{
+                clear: both;
+                display: block;
+                content: "";
+            }
+            
+            .wraper.cf {
+                width: 1000px;
+                margin: 0 auto;
+            }
+            .account {
+                background: rgba(0,0,0,0.5);
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                color: #fff;
+                font-weight: bold;
+                text-align: right;
+                padding: 0 20px;
+                z-index: 999;
+            }
+            
+            .account p{
+                margin: 0;
+                padding: 5px;
+            }
+            
+            p{
+                margin-bottom: 0;
+            }
+           
+            .btn_logout{
+                display: inline-block;
+                margin-left: 5px;
+            }
+            #main_contents{
+                width: 800px;
+                float: left;
+                padding:  20px 20px;
+                background: #fff;
+                box-sizing: border-box;
+                
+            }
+            h1{
+                font-size: 56px;
+                text-align: center;
+            }
+            
+            .under h1{
+                font-size: 26px;
+            }
+            .toukou_area{
+                border-bottom: 1px solid #ccc;
+                padding: 25px;
+                position: relative;
+                
+            }
+            
+            input.toukou_delete {
+                display: block;
+                position: absolute;
+                right: 0;
+                bottom: 15px;
+                padding: 5px;
+                z-index: 0;
+            }
+            
+            .your_message{
+                background: #ddebd7;
+            }
+            .txt_bold{
+                font-size: 16px;
+                font-weight: bold;
+                margin-top: 0;
+            }
+            
+            .toukousya{
+                font-size: 12px;
+                margin-bottom: 15px;
+                margin-top: 0;
+            }
+            
+            .toukoubi {
+                margin-bottom: 5px;
+                text-align: right;
+                font-size: 12px;
+            }
+            textarea{
+                width: 100%;
+                height: 80px;
+                display: block;
+                 box-sizing: border-box;
+            }
+            
+            dl{
+                width: 100%;
+                margin: 0 auto;
+            }
+            
+            dd {
+                margin-left: 0px;
+                margin-bottom: 15px;
+            }
+            
+            dt {
+                margin-bottom: 10px;
+            }
+            
+            .submit02{
+                display: block;
+                width: 90px;
+                height: 40px;
+                margin: 0 auto;
+            }
+            
+            [name="delete"]{
+                width: 90px;                           
+            }
+            
+            form{
+                padding-top: 30px;
+            }
+            
+            .thread_comment_form{
+                padding-top: 0;
+            }
+            
+            .message_select{
+                overflow: hidden;
+                width: 100%;
+                margin: 0 auto;
+            }
+            
+            .message_select select,
+            .message_select p{
+                float: left;
+                margin: 0;
+                padding: 5px;
+            }
+            
+            span.icon_from,
+            span.icon_to{
+                display: inline-block;
+                padding: 5px;
+                background: #05B2D2;
+                font-weight: bold;
+                color: #fff;
+                margin-right: 5px;
+                border-radius: 4px;
+            }
+            
+            span.icon_to{
+                background: #090;                               
+            }
+            
+            .thread_name{
+                font-size: 16px;
+                vertical-align: middle;
+            }
+            
+            .btn_logout a,
+            .btn_login a{
+                color: #fff;
+            }
+            
+            .side {
+                width: 180px;
+                float: right;
+                
+            }
+            
+            .side_inner{
+                position: fixed;
+                top: 50px;
+            }
+            
+            .side .member{
+                width: 180px;                
+                background: #fff;
+            }
+            
+            .login_from{
+                margin-bottom: 40px;
+            }
+            
+            .login_inner.inner {
+                text-align: center;
+            }
+            
+            .side .member dt{
+                text-align: center;
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 0;
+                padding: 10px;                
+                background: green;
+                color: #fff;
+            }
+            
+            .side .member dd{
+                margin-bottom: 0;
+            }
+            
+            .membaer_list {
+                padding: 3px;
+                border: 3px solid green;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                height: 150px;
+                margin-bottom: 20px;
+            }
+            
+            .membaer_list li a{
+                padding: 5px 10px;
+                font-size: 16px;
+                display: block;
+                border-bottom: 1px solid #ccc;
+            }            
+           
+            .membaer_list li:last-child a{
+                border-bottom: none;
+            }
+            

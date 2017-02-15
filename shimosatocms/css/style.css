@@ -1,0 +1,228 @@
+@charset "utf-8";
+.clearfix:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.body{
+    background: #ccc;
+}
+
+.wraper{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.haeder h1{
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0 10px;
+}
+
+.haeder h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px; 
+}
+
+
+.container{
+    margin-bottom: 20px;
+}
+
+.main{
+    width: 70%;
+    float: right;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.side_navi{
+    width: 28%;
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.navi_ttl{
+    margin-bottom: 15px;
+}
+
+h2.side_ttl{
+    background: #333;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.navi_ttl ul li{
+    padding: 0 6px;
+}
+
+.fotter{
+    width: 100%;
+    background: #000;
+    text-align: center;
+    color: #fff;
+}
+
+ dashboard.php 
+.topmain{   
+    height: 400px;
+    padding-top: 165px;
+    box-sizing: border-box;
+}
+
+p.dashCaption {
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+/* post_all.php */
+.all_post_table{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.all_post_table th{
+    background: gray;
+    color: #fff;
+    font-weight: bold;
+}
+
+.all_post_table th:nth-of-type(1){
+    width: 30px;
+}
+
+.all_post_table th:nth-of-type(4){
+    width: 60px;
+}
+
+.all_post_table td span.edit{
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 1px;
+    border-style: outset;
+    border-color: buttonface;
+    cursor: pointer;
+}
+
+.all_post_table th,
+.all_post_table td,
+.all_post_table th,
+.all_post_table td{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+/* post.php */
+.post_table01{
+    margin-bottom: 15px;
+}
+
+.post_box dl dd{
+    margin-bottom: 15px;
+}
+
+
+.post_box dl input{
+    width: 100%;
+    height: 20px;
+}
+
+.post_box dl textarea{
+    width: 100%;
+    min-height: 500px;
+}
+
+.submit_box{
+    text-align: center;
+    width: 370px;
+    margin: 0 auto;
+}
+
+.toukou,
+.preview{
+    width: 48%;
+    padding: 5px;
+}
+
+
+/* category.php */
+
+.category_table01,
+.category_table02{
+    width: 100%;
+    margin-bottom: 40px;
+}
+.category_table01 th,
+.category_table02 th{
+    background: gray;
+    color: #fff;
+    font-weight: bold;
+}
+
+.category_table01 th:nth-of-type(1){
+    width: 30px;
+}
+
+.category_table01 th:nth-of-type(3){
+    width: 60px;
+}
+
+.category_table01 td span.edit{
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 1px;
+    border-style: outset;
+    border-color: buttonface;
+    cursor: pointer;
+}
+
+.category_table01 th,
+.category_table01 td,
+.category_table02 th,
+.category_table02 td{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+.category_table02{}
+
+.category_table02 th{
+    width: 110px;
+}
+
+.category_table02 td:nth-of-type(1) input{
+    width: 90%;
+}
+
+.category_table02 td:nth-of-type(2) {
+    width: 60px;
+}

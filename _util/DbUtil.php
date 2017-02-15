@@ -272,7 +272,7 @@ class DbUtil
     public function getThredsData($threadsId) {
         $threadsData = [];
         try{
-            $threadsData = $this->pdo->prepare("select threads.id as threads_id, threads.threads_name, threads.delete_key, threads.created, comments.id as comments_id, comments.comment,  comments.unique_id, comments.nickname, comments.delete_key, comments.created from threads inner join comments on (threads.id = comments.threads_id) where threads.id = :threadsId");
+            $threadsData = $this->pdo->prepare("select threads.id as threads_id, threads.threads_name, threads.delete_key, threads.created, comments.id as comments_id, comments.comment,  comments.unique_id, comments.nickname, comments.delete_key, comments.created from threads left join comments on (threads.id = comments.threads_id) where threads.id = :threadsId");
             $threadsData->bindValue(':threadsId',$threadsId);      
             $threadsData->execute();
             $threadsData = $threadsData->fetchAll();

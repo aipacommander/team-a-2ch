@@ -21,7 +21,7 @@ if(!empty($threadsId) ) {
       foreach ($threadsData as $row) {
             $id = $row['threads_id'];
             $threadsName = $row['threads_name'];
-//            $deleteKey = $row['de lete_key'];
+//            $deleteKey = $row['delete_key'];
 //            $created = $row['created'];
 //            $modified = $row['modified'];
         }
